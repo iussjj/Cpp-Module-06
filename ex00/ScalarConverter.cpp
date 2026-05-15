@@ -61,7 +61,7 @@ static void printChar(double val)
 	}
 	else if (std::isprint(static_cast<int>(val)))
 	{
-		std::cout << "char: " << static_cast<char>(val) << "\n";
+		std::cout << "char: '" << static_cast<char>(val) << "'\n";
 	}
 	else //catches control chars 0-31 & 127
 	{
