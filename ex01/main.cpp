@@ -2,7 +2,7 @@
 #include "Serializer.hpp"
 #include <iostream>
 
-int main(void)
+int main()
 {
 	Data data;
 	data.id = 0;
