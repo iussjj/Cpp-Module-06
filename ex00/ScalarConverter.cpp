@@ -65,7 +65,7 @@ static void printChar(double val)
 	}
 	else //catches control chars 0-31 & 127
 	{
-		std::cout << "char: Non-displayable\n";
+		std::cout << "char: Non displayable\n";
 	}
 }
 
@@ -232,16 +232,13 @@ static bool checkChar(const std::string& literal)
 
 void ScalarConverter::convert(const std::string& literal)
 {
-	if (checkSpecial(literal))
-		return ;
-	if (checkInt(literal))
-		return ;
-	if (checkFloat(literal))
-		return ;
-	if (checkDouble(literal))
-		return ;
-	if (checkChar(literal))
-		return ;
+	if (checkSpecial(literal) || checkInt(literal) ||
+		checkFloat(literal) || checkDouble(literal) ||
+		checkChar(literal))
+	{
+		return;
+	}
+
 	std::cout	<< "char: impossible\n"
 				<< "int: impossible\n"
 				<< "float: impossible\n"
